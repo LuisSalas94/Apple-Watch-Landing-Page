@@ -1,0 +1,662 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	transition: all 0.2s linear;
+}
+
+:root {
+	--gray: #313132;
+	--background: #f5f5f7;
+	--red: #ff3f67;
+}
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+	font-family: "Open Sans", sans-serif;
+}
+
+body {
+	background: var(--background);
+}
+
+*::selection {
+	background-color: var(--gray);
+	color: var(--background);
+}
+
+/* ******************************** Utilities *************************************** */
+.btn {
+	padding: 0.6rem 3rem;
+	font-size: 2rem;
+	margin-top: 1rem;
+	cursor: pointer;
+	border: none;
+	background-color: var(--red);
+	color: #f5f5f7;
+	border-radius: 0.5rem;
+	text-transform: capitalize;
+}
+
+.btn:hover {
+	background-color: var(--background);
+	color: var(--red);
+	border: 0.1rem solid var(--red);
+}
+
+.heading {
+	text-align: center;
+	font-size: 3.5rem;
+	color: var(--background);
+	padding: 1rem;
+	padding-top: 6.5rem;
+	width: 50rem;
+	margin: 0 auto;
+}
+
+/* ******************************** Header Section *************************************** */
+header {
+	width: 100%;
+	background: var(--gray);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	padding: 1.2rem 7%;
+}
+
+header .logo {
+	font-size: 3.5rem;
+	color: var(--background);
+	cursor: pointer;
+}
+
+header .navbar ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header .navbar ul li {
+	cursor: pointer;
+}
+
+header .navbar ul li a {
+	font-size: 1.5rem;
+	margin-left: 2rem;
+	color: var(--background);
+	text-transform: capitalize;
+	position: relative;
+}
+
+header .navbar ul li a::before {
+	content: "";
+	position: absolute;
+	bottom: -0.5rem;
+	right: 0;
+	height: 0.1rem;
+	width: 0%;
+	background: var(--background);
+	transition: 0.2s linear;
+}
+
+header .navbar ul li a.active::before,
+header .navbar ul li a:hover::before {
+	left: 0;
+	width: 100%;
+}
+
+header #menu {
+	cursor: pointer;
+	font-size: 2.5rem;
+	color: var(--background);
+	display: none;
+}
+
+/* ******************************** Home Section *************************************** */
+section {
+	padding: 0 7%;
+}
+
+.home {
+	background-color: var(--background);
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 9rem;
+}
+
+.home .image {
+	padding: 1rem;
+	flex: 1 1 40rem;
+	text-align: center;
+}
+
+.home .image img {
+	height: 70vh;
+	padding-top: 4rem;
+}
+
+.home .content {
+	padding: 1rem;
+	flex: 1 1 40rem;
+}
+
+.home .content h1 {
+	font-size: 5rem;
+	color: var(--gray);
+}
+
+.home .content p {
+	font-size: 1.8rem;
+	color: var(--gray);
+	padding: 1rem 0;
+}
+
+/* ******************************** Core Features Section *************************************** */
+.core {
+	width: 100%;
+	min-height: 80vh;
+	background-color: var(--gray);
+	padding-bottom: 5rem;
+}
+
+.core .row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.core .row .image {
+	text-align: center;
+	flex: 1 1 30rem;
+}
+
+.core .row .image img {
+	height: 65vh;
+	padding: 3rem 0;
+}
+
+.core .row .box-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex: 1 1 70rem;
+}
+
+.core .row .box-container .box {
+	height: 13rem;
+	width: 27rem;
+	margin: 2rem;
+	padding: 2rem;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+	background-color: #444;
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
+
+.core .row .box-container .box:hover {
+	transform: scale(1.1);
+	background: var(--red);
+}
+
+.core .row .box-container .box h3 {
+	font-size: 2rem;
+	color: var(--background);
+}
+
+.core .row .box-container .box h3 i {
+	color: #222;
+	padding-right: 0.6rem;
+}
+
+.core .row .box-container .box p {
+	font-size: 1.2rem;
+	color: var(--background);
+	padding: 1rem 0;
+}
+
+/* ******************************** About Section *************************************** */
+.about {
+	background: var(--background);
+	min-height: 80vh;
+}
+
+.about .heading {
+	color: var(--gray);
+	text-transform: capitalize;
+}
+
+.about .row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 3rem;
+	padding-bottom: 5rem;
+}
+
+.about .row .image {
+	flex: 1 1 45rem;
+	text-align: center;
+}
+
+.about .row .image img {
+	width: 85%;
+	border-radius: 0.5rem;
+}
+
+.about .row .content {
+	flex: 1 1 45rem;
+	padding: 2.5rem;
+}
+
+.about .row .content h3 {
+	font-size: 3.5rem;
+	color: var(--gray);
+}
+
+.about .row .content p {
+	font-size: 1.7rem;
+	color: var(--gray);
+	padding: 1rem 0;
+}
+
+.about .row .content p i {
+	padding-right: 0.5rem;
+	color: var(--red);
+}
+
+/* ******************************** Features Section *************************************** */
+.features {
+	min-height: 80vh;
+	background: var(--gray);
+}
+
+.features .heading {
+	text-transform: capitalize;
+}
+
+.features .box-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.features .box-container .box {
+	margin: 1.5rem;
+	text-align: center;
+	padding: 1rem;
+	width: 27rem;
+	border: 0.2rem solid #fff;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	background-color: #444;
+}
+
+.features .box-container .box:hover {
+	transform: scale(1.1);
+	background: var(--red);
+}
+
+.features .box-container .box i {
+	height: 7rem;
+	width: 7rem;
+	line-height: 7rem;
+	font-size: 3rem;
+	text-align: center;
+	border-radius: 50%;
+	background-color: var(--background);
+	color: var(--gray);
+	margin: 1rem 0;
+}
+
+.features .box-container .box h3 {
+	color: var(--background);
+	font-size: 1.8rem;
+	text-transform: capitalize;
+}
+
+.features .box-container .box p {
+	color: var(--background);
+	font-size: 1.2rem;
+	padding: 1rem 0.5rem;
+}
+
+/* ******************************** Product Section *************************************** */
+.product {
+	min-height: 80vh;
+	background-color: var(--background);
+	padding-top: 5%;
+}
+
+.product .heading {
+	color: var(--gray);
+	text-transform: capitalize;
+}
+
+.product .box-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.product .box-container .box {
+	margin: 1.5rem;
+	padding: 1rem;
+	width: 50rem;
+	background: #333;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
+
+.product .box-container .box:hover {
+	transform: scale(1.1);
+}
+
+.product .box-container .box .image {
+	padding: 1rem;
+}
+
+.product .box-container .box .image img {
+	padding: 0 3rem;
+	width: 20rem;
+	border-right: 0.1rem solid #ccc;
+}
+
+.product .box-container .box .content {
+	padding: 1rem;
+}
+
+.product .box-container .box .content h3 {
+	font-size: 2.2rem;
+	color: var(--background);
+}
+
+.product .box-container .box .content p {
+	font-size: 1.2rem;
+	color: var(--background);
+	padding: 1rem 0;
+}
+
+.product .box-container .box .content .price {
+	font-size: 2rem;
+	color: var(--background);
+}
+
+.product .box-container .box .content .btn {
+	background-color: #0077ed;
+	padding: 0.3rem 1.5rem;
+	font-size: 1.5rem;
+}
+
+.product .box-container .box .content .btn:hover {
+	border: none;
+	color: var(--background);
+}
+
+/* ******************************** Contact Section *************************************** */
+.contact {
+	min-height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 8.5rem;
+	background-color: var(--gray);
+}
+
+.contact form {
+	background: #444;
+	flex: 1 1 40rem;
+	padding: 3rem;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+	border-radius: 0.5rem;
+}
+
+.contact form .box {
+	height: 5rem;
+	width: 100%;
+	background: none;
+	border: none;
+	border-bottom: 0.2rem solid #ccc;
+	font-size: 2rem;
+	margin: 1rem 0;
+	color: var(--background);
+	transform: none;
+}
+
+.contact form textarea {
+	height: 15rem;
+	width: 100%;
+	background: none;
+	border-radius: 0.5rem;
+	border: none;
+	border-bottom: 0.2rem solid #ccc;
+	font-size: 2rem;
+	margin: 1rem 0;
+	color: var(--background);
+	text-transform: none;
+	resize: none;
+}
+
+.contact form .box::placeholder,
+.contact form textarea::placeholder {
+	text-transform: capitalize;
+}
+
+.contact form .box:focus,
+.contact form textarea:focus {
+	border-color: var(--red);
+}
+
+.contact form .btn {
+	margin-top: 1rem;
+	width: 100%;
+}
+
+.contact .content {
+	flex: 1 1 40rem;
+	padding: 4rem;
+}
+
+.contact .content h3 {
+	font-size: 4rem;
+	color: var(--background);
+}
+
+.contact .content p {
+	font-size: 1.4rem;
+	color: var(--background);
+	padding: 1rem 0;
+}
+
+.contact .content .icons {
+	display: flex;
+	align-items: center;
+}
+
+.contact .content .icons p {
+	font-size: 2rem;
+	color: var(--background);
+}
+
+.contact .content .icons i {
+	font-size: 2rem;
+	color: var(--red);
+	padding-right: 1em;
+}
+
+/* ******************************** Footer Section *************************************** */
+.credit {
+	text-align: center;
+	padding: 2rem 0;
+	background: #444;
+	color: var(--background);
+	text-transform: capitalize;
+	font-size: 2rem;
+}
+
+/* ******************************** Media Queries *************************************** */
+@media screen and (max-width: 1800px) {
+	.product {
+		padding-bottom: 4rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	html {
+		font-size: 55%;
+	}
+
+	/* navbar starts */
+	header #menu {
+		display: block;
+	}
+
+	header .navbar {
+		position: fixed;
+		/* 	top: 7.4rem; */
+		top: -120%;
+		left: 0;
+		width: 100%;
+		background-color: #333;
+	}
+
+	header .navbar ul {
+		flex-direction: column;
+		padding: 2rem;
+	}
+
+	header .navbar ul li {
+		width: 100%;
+		text-align: center;
+	}
+
+	header .navbar ul li a {
+		display: block;
+		margin: 1.5rem 0;
+		padding: 1rem 0;
+		font-size: 2.5rem;
+		z-index: 0;
+		color: var(--background);
+	}
+
+	header .navbar ul li a:hover {
+		transform: scale(1.2);
+	}
+
+	header .navbar ul li a.active::before,
+	header .navbar ul li a:hover::before {
+		left: 0;
+		width: 0%;
+	}
+
+	.fa-times {
+		transform: rotate(180deg);
+	}
+
+	header .navbar.nav-toggle {
+		top: 7.2rem;
+	}
+
+	/* navbar ends */
+	.home {
+		padding-bottom: 3rem;
+	}
+
+	.home .content {
+		text-align: center;
+	}
+
+	/* core section */
+
+	.core .row .image {
+		display: none;
+	}
+
+	.contact .content {
+		padding: 3rem 0;
+	}
+
+	.features {
+		padding-bottom: 3rem;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	html {
+		font-size: 50%;
+	}
+
+	.home .content h1 {
+		font-size: 4rem;
+	}
+
+	.home .image img {
+		height: auto;
+		width: 90%;
+	}
+
+	.heading {
+		width: auto;
+	}
+
+	.core .row .box-container .box {
+		width: 90%;
+		height: auto;
+	}
+
+	.core .row .box-container .box p {
+		font-size: 1.7rem;
+	}
+
+	.about .row .image img {
+		width: 90%;
+	}
+
+	.features .box-container .box {
+		width: 90%;
+	}
+
+	.features .box-container .box p {
+		font-size: 1.5rem;
+	}
+
+	.product .box-container .box {
+		flex-direction: column;
+		text-align: center;
+		height: auto;
+	}
+
+	.product .box-container .box .image img {
+		width: 70%;
+		border: none;
+	}
+
+	.product .box-container .box .content p {
+		font-size: 1.7rem;
+	}
+}
