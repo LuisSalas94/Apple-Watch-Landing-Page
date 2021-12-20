@@ -15,7 +15,7 @@ Fully responsive landing page
 
 ## Live Demo
 
-[Live Demo Link](https://youthful-goldwasser-2d3cb1.netlify.app/#donate)
+[Live Demo Link](https://nervous-einstein-321962.netlify.app/)
 
 ## Author
 
